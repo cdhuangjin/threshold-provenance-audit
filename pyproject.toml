@@ -6,6 +6,19 @@ build-backend = "setuptools.build_meta"
 name = "baf-threshold-gate"
 version = "0.1.0"
 requires-python = ">=3.12"
+dependencies = [
+  "folktables==0.0.12",
+  "lightgbm==4.7.0",
+  "matplotlib>=3.10",
+  "numpy==2.4.4",
+  "pandas==3.0.2",
+  "psutil>=7.2",
+  "scikit-learn==1.8.0",
+  "seaborn>=0.13",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=9"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
