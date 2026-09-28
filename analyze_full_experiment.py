@@ -145,7 +145,7 @@ def markdown_report(summary: dict) -> str:
         f"- Primary units: `{primary['n_primary_units']}`",
         f"- Median absolute PE gap: `{primary['primary_median_abs_pe_gap']:.6f}`",
         f"- Stratified bootstrap 95% CI: `[{primary['bootstrap_ci_95'][0]:.6f}, {primary['bootstrap_ci_95'][1]:.6f}]`",
-        f"- H1 effect path: `{primary['h1_pass']}`; capacity-ranking path: `{primary['h1_ranking_path_pass']}`",
+        f"- H1 qualifying variants: `{', '.join(primary['h1_qualifying_variants']) or 'none'}`; same-direction criterion: `{primary['h1_same_direction_pass']}`; H1 effect path: `{primary['h1_pass']}`; capacity-ranking path: `{primary['h1_ranking_path_pass']}`",
         f"- Capacity-ranking turnover: `{json.dumps(primary['ranking_turnover'], ensure_ascii=False)}`",
         f"- Stratified bootstrap 95% CI for turnover: `[{primary['ranking_turnover_ci']['ci_low']:.3f}, {primary['ranking_turnover_ci']['ci_high']:.3f}]`",
         "",

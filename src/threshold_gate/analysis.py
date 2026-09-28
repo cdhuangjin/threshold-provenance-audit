@@ -131,8 +131,15 @@ def summarize_gate(rows: pd.DataFrame, bootstrap_replicates: int = 2_000, bootst
         })
     ranking = capacity_ranking_turnover(rows)
     ranking_ci = ranking_turnover_ci(rows)
-    qualifying = [x["variant"] for x in variant_summary if x["median_abs_pe_gap"] >= 0.05]
-    h1 = len(qualifying) >= 2 and ci_low > 0.02
+    qualifying_summaries = [x for x in variant_summary if x["median_abs_pe_gap"] >= 0.05]
+    qualifying = [x["variant"] for x in qualifying_summaries]
+    qualifying_directions = {}
+    for item in qualifying_summaries:
+        if item["direction"] != "tie":
+            qualifying_directions.setdefault(item["direction"], []).append(item["variant"])
+    same_direction_variants = max(qualifying_directions.values(), key=len, default=[])
+    h1_same_direction_pass = len(same_direction_variants) >= 2
+    h1 = len(qualifying) >= 2 and ci_low > 0.02 and h1_same_direction_pass
     h2_table = _policy_error_table(rows)
     h2_summary = []
     for policy, group in h2_table.groupby("policy", sort=True) if not h2_table.empty else []:
@@ -154,6 +161,8 @@ def summarize_gate(rows: pd.DataFrame, bootstrap_replicates: int = 2_000, bootst
         "primary_mean_abs_pe_gap": float(effects["abs_pe_gap"].mean()) if not effects.empty else float("nan"),
         "bootstrap_ci_95": [ci_low, ci_high],
         "h1_qualifying_variants": qualifying,
+        "h1_same_direction_qualifying_variants": same_direction_variants,
+        "h1_same_direction_pass": bool(h1_same_direction_pass),
         "h1_pass": bool(h1),
         "h1_ranking_path_pass": bool(h1_ranking),
         "ranking_turnover": ranking,
@@ -187,8 +196,7 @@ def markdown_report(summary: dict, run_metadata: dict) -> str:
         f"- Median absolute PE gap: `{summary['primary_median_abs_pe_gap']:.6f}`",
         f"- Mean absolute PE gap: `{summary['primary_mean_abs_pe_gap']:.6f}`",
         f"- Stratified bootstrap 95% CI: `[{summary['bootstrap_ci_95'][0]:.6f}, {summary['bootstrap_ci_95'][1]:.6f}]`",
-        f"- H1 qualifying variants: `{', '.join(summary['h1_qualifying_variants']) or 'none'}`",
-        f"- H1 effect path: `{summary['h1_pass']}`; ranking path: `{summary['h1_ranking_path_pass']}`",
+        f"- H1 qualifying variants: `{', '.join(summary['h1_qualifying_variants']) or 'none'}`; same-direction criterion: `{summary['h1_same_direction_pass']}`; H1 effect path: `{summary['h1_pass']}`; ranking path: `{summary['h1_ranking_path_pass']}`",
         "",
         "## Variant summary",
         "",
