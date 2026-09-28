@@ -18,4 +18,4 @@ python survey_weight_sensitivity/run_sensitivity.py --data-root <WHySHIFT_ACS_DA
 
 Set each data directory to the local copy of the corresponding public source data. The exact input hashes, seeds, model settings, fit counts, and software versions for the recorded runs are in the JSON run manifests under `results/`. The source protocols describe the splits, filters, and thresholds. Raw input data are not included.
 
-The README and protocols do not grant a code license. A LICENSE file should be added after the copyright holder selects the terms.
+The code is licensed under the MIT License; see `LICENSE`. Input datasets retain their own source terms and are not included.
