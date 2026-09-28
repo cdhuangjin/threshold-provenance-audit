@@ -92,5 +92,22 @@
     "external_module": "a1d4ce48d01e138e4b8fd56d390857f50501cff5111885bdee90ed344839fadc",
     "analyzer": "f10bfd01f7ada5b33722eecac5dc62ef19302e902c6a30e3d2ba201943232847",
     "figure_generator": "cd64f2f26c8d50b1ee4a8125194cff72d813e23c72ddc10301dde8b5f540f262"
+  },
+  "hardware_inventory": {
+    "cpu_model": "Intel(R) Core(TM) Ultra 7 270K Plus",
+    "physical_cores": 24,
+    "logical_processors": 24,
+    "l2_cache_mib": 40,
+    "l3_cache_mib": 36,
+    "installed_ram_bytes": 17179869184,
+    "installed_ram_gib": 16,
+    "ram_visible_to_windows_gib": 15.38,
+    "gpu_used": false,
+    "operating_system": "Windows 11 Pro",
+    "os_version": "10.0.26200",
+    "os_build": "26200",
+    "os_architecture": "64-bit",
+    "inventory_recorded_at": "2026-09-28",
+    "recording_basis": "Queried on the author-confirmed run machine after the experiment; the author confirmed this is the same computer used for the BAF and ACS runs."
   }
 }

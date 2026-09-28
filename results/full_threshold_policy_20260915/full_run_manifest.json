@@ -44,5 +44,22 @@
     0.5,
     1.0
   ],
-  "data_manifest": "D:\\data\u6570\u636e\u96c6\\BAF\\MANIFEST.md"
+  "data_manifest": "D:\\data\u6570\u636e\u96c6\\BAF\\MANIFEST.md",
+  "hardware_inventory": {
+    "cpu_model": "Intel(R) Core(TM) Ultra 7 270K Plus",
+    "physical_cores": 24,
+    "logical_processors": 24,
+    "l2_cache_mib": 40,
+    "l3_cache_mib": 36,
+    "installed_ram_bytes": 17179869184,
+    "installed_ram_gib": 16,
+    "ram_visible_to_windows_gib": 15.38,
+    "gpu_used": false,
+    "operating_system": "Windows 11 Pro",
+    "os_version": "10.0.26200",
+    "os_build": "26200",
+    "os_architecture": "64-bit",
+    "inventory_recorded_at": "2026-09-28",
+    "recording_basis": "Queried on the author-confirmed run machine after the experiment; the author confirmed this is the same computer used for the BAF and ACS runs."
+  }
 }

@@ -3,9 +3,12 @@
 This repository contains analysis code, frozen run protocols, environment/configuration manifests, machine-readable run outputs, and tests for BAF and ACS experiments. Input datasets are not included.
 
 ## Environment recorded in run manifests
-- Windows 11; Python 3.12.10
+- Intel(R) Core(TM) Ultra 7 270K Plus (24 physical cores / 24 logical processors; 40 MiB L2 and 36 MiB L3 cache), 16 GiB installed RAM (15.38 GiB visible to Windows); no GPU used
+- 64-bit Windows 11 Pro build 26200; Python 3.12.10
 - pandas 3.0.2, NumPy 2.4.4, LightGBM 4.7.0, scikit-learn 1.8.0
 - folktables 0.0.12 for ACS
+
+The author confirmed that the queried PC was the run machine. The hardware inventory was queried on 2026-09-28 after the runs; the manifests preserve this provenance distinction.
 
 ## Install
 Use Python 3.12 and install the pinned core packages and plotting/runtime dependencies from `pyproject.toml`:
