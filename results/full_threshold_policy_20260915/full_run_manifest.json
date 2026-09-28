@@ -1,0 +1,48 @@
+{
+  "protocol": "BAF Threshold-Transfer Full Experiment Protocol v0.1",
+  "command": ".\\repro\\05_turning_tables\\threshold_gate\\run_full_experiment.py --data-root D:\\data\u6570\u636e\u96c6\\BAF --output-dir .\\repro\\05_turning_tables\\threshold_gate\\results\\full_threshold_policy_20260915 --resume",
+  "data_root": "D:\\data\u6570\u636e\u96c6\\BAF",
+  "data_hashes": {
+    "Base": "7bf10a37ce07e72e14c1b09e5efee3d27261baff4facc7da767b0474dcf9b809",
+    "Variant I": "48c637a255d1fa4515da4286ccb99251412a6d905937ec7c108838ddfc1674bd",
+    "Variant II": "60bcd971cf28779abb183c3286990cff9a87275bd8b83d9f6054a396c95cc736",
+    "Variant III": "64693e549cff7ef802cf043fc7c937839e5929966e33a0852953b3f4c4321339",
+    "Variant IV": "c6cddebbad34fa262a278deeb7985e7b669a64308d26e480d8eb85bfd08dac75",
+    "Variant V": "470899bbef97c32a100528d63e863e1b1036df9501df6ef8140e7ec13b7365b4"
+  },
+  "fit_count": 90,
+  "expected_fit_count": 90,
+  "row_count": 4320,
+  "stop_reason": null,
+  "wall_seconds": 6050.794592300001,
+  "cpu_seconds": 6437.65625,
+  "peak_rss_gib": 0.7574386596679688,
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4",
+    "lightgbm": "4.7.0",
+    "scikit_learn": "1.8.0"
+  },
+  "seeds": [
+    42,
+    314,
+    2718,
+    1618,
+    8675309
+  ],
+  "target_fprs": [
+    0.01,
+    0.02,
+    0.05,
+    0.1
+  ],
+  "noise_severities": [
+    0.0,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "data_manifest": "D:\\data\u6570\u636e\u96c6\\BAF\\MANIFEST.md"
+}

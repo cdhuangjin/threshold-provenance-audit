@@ -1,0 +1,84 @@
+{
+  "protocol": "WhyShift external threshold-transfer replication protocol v0.1",
+  "fit_count": 60,
+  "expected_fit_count": 60,
+  "row_count": 480,
+  "complete": true,
+  "n_primary_units": 60,
+  "primary_median_abs_pe_gap": 0.029075240725441764,
+  "primary_mean_abs_pe_gap": 0.03321677115383321,
+  "primary_bootstrap_ci_95": [
+    0.0225385775836697,
+    0.0403152774446364
+  ],
+  "ranking_turnover": {
+    "units": 20,
+    "changed_units": 14,
+    "turnover": 0.7,
+    "ci_low": 0.55,
+    "ci_high": 0.85,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20260916
+  },
+  "pair_summary": [
+    {
+      "pair": "CA->HI",
+      "n": 15,
+      "median_abs_pe_gap": 0.026171615383233537,
+      "mean_abs_pe_gap": 0.030722729931662793,
+      "oracle_higher_units": 5,
+      "oracle_lower_units": 10
+    },
+    {
+      "pair": "CA->PR",
+      "n": 15,
+      "median_abs_pe_gap": 0.04119087328304549,
+      "mean_abs_pe_gap": 0.046744948835354454,
+      "oracle_higher_units": 1,
+      "oracle_lower_units": 14
+    },
+    {
+      "pair": "MA->PR",
+      "n": 15,
+      "median_abs_pe_gap": 0.030923095349443708,
+      "mean_abs_pe_gap": 0.029594352566261143,
+      "oracle_higher_units": 6,
+      "oracle_lower_units": 9
+    },
+    {
+      "pair": "MS->HI",
+      "n": 15,
+      "median_abs_pe_gap": 0.02208423091936912,
+      "mean_abs_pe_gap": 0.02580505328205444,
+      "oracle_higher_units": 10,
+      "oracle_lower_units": 5
+    }
+  ],
+  "target_fpr_sensitivity": [
+    {
+      "target_fpr": 0.01,
+      "n": 60,
+      "median_abs_pe_gap": 0.0519797672802529,
+      "mean_abs_pe_gap": 0.06228285693336321
+    },
+    {
+      "target_fpr": 0.02,
+      "n": 60,
+      "median_abs_pe_gap": 0.023503794250682164,
+      "mean_abs_pe_gap": 0.035499169184878644
+    },
+    {
+      "target_fpr": 0.05,
+      "n": 60,
+      "median_abs_pe_gap": 0.029075240725441764,
+      "mean_abs_pe_gap": 0.03321677115383321
+    },
+    {
+      "target_fpr": 0.1,
+      "n": 60,
+      "median_abs_pe_gap": 0.02256058007416678,
+      "mean_abs_pe_gap": 0.02229093738192753
+    }
+  ],
+  "interpretation": "external replication complete; effect size and sign are descriptive and need not match BAF; pair intervals are not population-level because state pairs overlap"
+}

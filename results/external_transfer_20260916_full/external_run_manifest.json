@@ -1,0 +1,96 @@
+{
+  "protocol": "WhyShift external threshold-transfer replication protocol v0.1",
+  "command": "run_external_transfer.py --data-root D:\\data\u6570\u636e\u96c6\\WhyShift\\acs\\2018\\1-Year --output-dir results\\external_transfer_20260916_full",
+  "data_root": "D:\\data\u6570\u636e\u96c6\\WhyShift\\acs\\2018\\1-Year",
+  "data_manifest": "D:\\data\u6570\u636e\u96c6\\WhyShift\\MANIFEST.md",
+  "state_hashes": {
+    "CA": "dc2187fc90df2c5f6b546ee89a2b41c9a97379c9e7136461b6a6c8de871b43e0",
+    "PR": "74436d4ffee9e5974982aff45622e49a192de2f22de528e2156c7ec13832e244",
+    "HI": "57f821dd8c4190fad8d677948028d75e200a4537c0a2944affd9cb50c88dcb8a",
+    "MS": "2944df2dbdc582720746f4a29e8fc47b409b06e65a53c952a5cb1e4691cb0a70",
+    "MA": "47be6d5a3636d3a9a02450239e93d8d25a6d86d25b108f6e6a5a786169f4dd21"
+  },
+  "state_row_counts_after_filter": {
+    "CA": 195665,
+    "PR": 9071,
+    "HI": 7731,
+    "MS": 13189,
+    "MA": 40114
+  },
+  "domain_pairs": [
+    "CA->PR",
+    "CA->HI",
+    "MS->HI",
+    "MA->PR"
+  ],
+  "fit_count": 60,
+  "expected_fit_count": 60,
+  "row_count": 480,
+  "stop_reason": null,
+  "wall_seconds": 67.46913580000546,
+  "cpu_seconds": 243.9375,
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4",
+    "lightgbm": "4.7.0",
+    "scikit_learn": "1.8.0",
+    "folktables": "0.0.12"
+  },
+  "seeds": [
+    42,
+    314,
+    2718,
+    1618,
+    8675309
+  ],
+  "target_fprs": [
+    0.01,
+    0.02,
+    0.05,
+    0.1
+  ],
+  "model_configs": [
+    "small",
+    "reference",
+    "large"
+  ],
+  "models": {
+    "small": {
+      "n_estimators": 100,
+      "max_depth": 4,
+      "learning_rate": 0.05,
+      "num_leaves": 15,
+      "min_data_in_leaf": 20,
+      "max_bin": 255
+    },
+    "reference": {
+      "n_estimators": 100,
+      "max_depth": 6,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "min_data_in_leaf": 20,
+      "max_bin": 255
+    },
+    "large": {
+      "n_estimators": 200,
+      "max_depth": 8,
+      "learning_rate": 0.05,
+      "num_leaves": 63,
+      "min_data_in_leaf": 20,
+      "max_bin": 255
+    }
+  },
+  "official_filter": "AGEP > 16, PINCP > 100, WKHP > 0, PWGTP >= 1",
+  "target_definition": "PINCP > 50000",
+  "group_definition": "AGEP > 50 versus AGEP <= 50",
+  "survey_weights_used": false,
+  "artifact_hashes": {
+    "protocol": "98530f956fdcb971fb5352b6b61b92a1e42522e363286790929c42f69fe4e681",
+    "runner": "0fae3728c698bde92a27ac7a5dd6d29f354d28ff16ccd0a552c6e7a659558cdd",
+    "external_module": "a1d4ce48d01e138e4b8fd56d390857f50501cff5111885bdee90ed344839fadc",
+    "analyzer": "f10bfd01f7ada5b33722eecac5dc62ef19302e902c6a30e3d2ba201943232847",
+    "figure_generator": "cd64f2f26c8d50b1ee4a8125194cff72d813e23c72ddc10301dde8b5f540f262"
+  }
+}

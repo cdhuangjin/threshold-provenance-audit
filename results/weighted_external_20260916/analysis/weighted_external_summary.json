@@ -1,0 +1,207 @@
+{
+  "protocol": "WhyShift ACS survey-weight sensitivity protocol v0.1",
+  "fit_count": 60,
+  "expected_fit_count": 60,
+  "row_count": 480,
+  "complete": true,
+  "n_primary_units": 60,
+  "primary_median_abs_pe_gap": 0.03948628980621338,
+  "primary_mean_abs_pe_gap": 0.044674690673582186,
+  "primary_bootstrap_ci_95": [
+    0.030165458140019696,
+    0.043983648212230664
+  ],
+  "ranking_turnover": {
+    "units": 20,
+    "changed_units": 16,
+    "turnover": 0.8,
+    "ci_low": 0.65,
+    "ci_high": 0.95,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20260916
+  },
+  "pair_summary": [
+    {
+      "pair": "CA->HI",
+      "n": 15,
+      "median_abs_pe_gap": 0.039152327565094125,
+      "mean_abs_pe_gap": 0.041674637879609566,
+      "oracle_higher_units": 8,
+      "oracle_lower_units": 7
+    },
+    {
+      "pair": "CA->PR",
+      "n": 15,
+      "median_abs_pe_gap": 0.0759463733496103,
+      "mean_abs_pe_gap": 0.07323403494916288,
+      "oracle_higher_units": 0,
+      "oracle_lower_units": 15
+    },
+    {
+      "pair": "MA->PR",
+      "n": 15,
+      "median_abs_pe_gap": 0.03916893368094876,
+      "mean_abs_pe_gap": 0.040505500162745435,
+      "oracle_higher_units": 3,
+      "oracle_lower_units": 12
+    },
+    {
+      "pair": "MS->HI",
+      "n": 15,
+      "median_abs_pe_gap": 0.0200761524848736,
+      "mean_abs_pe_gap": 0.02328458970281088,
+      "oracle_higher_units": 5,
+      "oracle_lower_units": 10
+    }
+  ],
+  "target_fpr_sensitivity": [
+    {
+      "target_fpr": 0.01,
+      "n": 60,
+      "median_abs_pe_gap": 0.04666851912306527,
+      "mean_abs_pe_gap": 0.06218393374287191
+    },
+    {
+      "target_fpr": 0.02,
+      "n": 60,
+      "median_abs_pe_gap": 0.02544634880188723,
+      "mean_abs_pe_gap": 0.041148919637920105
+    },
+    {
+      "target_fpr": 0.05,
+      "n": 60,
+      "median_abs_pe_gap": 0.03948628980621338,
+      "mean_abs_pe_gap": 0.044674690673582186
+    },
+    {
+      "target_fpr": 0.1,
+      "n": 60,
+      "median_abs_pe_gap": 0.022000295104463607,
+      "mean_abs_pe_gap": 0.024958616950713573
+    }
+  ],
+  "weighted_vs_unweighted_summary": [
+    {
+      "target_fpr": 0.01,
+      "policy": "source_calibrated",
+      "n": 60,
+      "median_delta_global_fpr": 0.0015976573009990301,
+      "mean_delta_global_fpr": 0.0017290802374101575,
+      "median_delta_recall": 0.011689983798736217,
+      "mean_delta_recall": 0.015171246240593324,
+      "median_delta_pe_ratio": -0.03634734119431399,
+      "mean_delta_pe_ratio": -0.010864289290286714,
+      "median_delta_brier": -0.0033909724166594907,
+      "mean_delta_brier": -0.0033157209098671533,
+      "median_delta_logloss": -0.006555910507597601,
+      "mean_delta_logloss": -0.007296225107824888
+    },
+    {
+      "target_fpr": 0.01,
+      "policy": "target_oracle",
+      "n": 60,
+      "median_delta_global_fpr": -2.829310605468715e-05,
+      "mean_delta_global_fpr": -3.140599029256711e-05,
+      "median_delta_recall": 0.0023508188205554614,
+      "mean_delta_recall": -0.0006724882329925757,
+      "median_delta_pe_ratio": -0.036463390701401976,
+      "mean_delta_pe_ratio": -0.024907079564768096,
+      "median_delta_brier": -0.0033909724166594907,
+      "mean_delta_brier": -0.0033157209098671533,
+      "median_delta_logloss": -0.006555910507597601,
+      "mean_delta_logloss": -0.007296225107824888
+    },
+    {
+      "target_fpr": 0.02,
+      "policy": "source_calibrated",
+      "n": 60,
+      "median_delta_global_fpr": 0.0035370317810561186,
+      "mean_delta_global_fpr": 0.003536654372648589,
+      "median_delta_recall": 0.019098526666272098,
+      "mean_delta_recall": 0.01821649980484715,
+      "median_delta_pe_ratio": -0.045425922219554105,
+      "mean_delta_pe_ratio": -0.029770430677226498,
+      "median_delta_brier": -0.0033909724166594907,
+      "mean_delta_brier": -0.0033157209098671533,
+      "median_delta_logloss": -0.006555910507597601,
+      "mean_delta_logloss": -0.007296225107824888
+    },
+    {
+      "target_fpr": 0.02,
+      "policy": "target_oracle",
+      "n": 60,
+      "median_delta_global_fpr": -1.731833075624585e-05,
+      "mean_delta_global_fpr": -3.181104693442196e-05,
+      "median_delta_recall": 0.0007202687246977563,
+      "mean_delta_recall": 0.00020671394622824997,
+      "median_delta_pe_ratio": -0.05396606465240658,
+      "mean_delta_pe_ratio": -0.03797784332723219,
+      "median_delta_brier": -0.0033909724166594907,
+      "mean_delta_brier": -0.0033157209098671533,
+      "median_delta_logloss": -0.006555910507597601,
+      "mean_delta_logloss": -0.007296225107824888
+    },
+    {
+      "target_fpr": 0.05,
+      "policy": "source_calibrated",
+      "n": 60,
+      "median_delta_global_fpr": 0.00591172901445515,
+      "mean_delta_global_fpr": 0.00540349101301272,
+      "median_delta_recall": 0.011227622837092555,
+      "mean_delta_recall": 0.011787753852418526,
+      "median_delta_pe_ratio": -0.04568307199578142,
+      "mean_delta_pe_ratio": -0.03834718218810951,
+      "median_delta_brier": -0.0033909724166594907,
+      "mean_delta_brier": -0.0033157209098671533,
+      "median_delta_logloss": -0.006555910507597601,
+      "mean_delta_logloss": -0.007296225107824888
+    },
+    {
+      "target_fpr": 0.05,
+      "policy": "target_oracle",
+      "n": 60,
+      "median_delta_global_fpr": -1.8278683010151953e-05,
+      "mean_delta_global_fpr": -4.737522223275797e-05,
+      "median_delta_recall": 0.0016222388796127418,
+      "mean_delta_recall": -0.0015832115060153344,
+      "median_delta_pe_ratio": -0.057930635690775556,
+      "mean_delta_pe_ratio": -0.04769474258895723,
+      "median_delta_brier": -0.0033909724166594907,
+      "mean_delta_brier": -0.0033157209098671533,
+      "median_delta_logloss": -0.006555910507597601,
+      "mean_delta_logloss": -0.007296225107824888
+    },
+    {
+      "target_fpr": 0.1,
+      "policy": "source_calibrated",
+      "n": 60,
+      "median_delta_global_fpr": 0.004473572694185496,
+      "mean_delta_global_fpr": 0.005171666938714523,
+      "median_delta_recall": 0.007374402614066522,
+      "mean_delta_recall": 0.009794520646330244,
+      "median_delta_pe_ratio": -0.047564326608662555,
+      "mean_delta_pe_ratio": -0.04471185385396714,
+      "median_delta_brier": -0.0033909724166594907,
+      "mean_delta_brier": -0.0033157209098671533,
+      "median_delta_logloss": -0.006555910507597601,
+      "mean_delta_logloss": -0.007296225107824888
+    },
+    {
+      "target_fpr": 0.1,
+      "policy": "target_oracle",
+      "n": 60,
+      "median_delta_global_fpr": 2.4266113998056005e-06,
+      "mean_delta_global_fpr": -6.372560217599484e-06,
+      "median_delta_recall": -0.001666856203694611,
+      "mean_delta_recall": -0.001017136213492147,
+      "median_delta_pe_ratio": -0.04512037951642728,
+      "mean_delta_pe_ratio": -0.05373913135329258,
+      "median_delta_brier": -0.0033909724166594907,
+      "mean_delta_brier": -0.0033157209098671533,
+      "median_delta_logloss": -0.006555910507597601,
+      "mean_delta_logloss": -0.007296225107824888
+    }
+  ],
+  "unweighted_primary_median_abs_pe_gap": 0.029075240725441764,
+  "interpretation": "secondary survey-weight sensitivity; weighted estimands do not replace the unweighted confirmatory ACS result and state pairs remain overlapping"
+}
